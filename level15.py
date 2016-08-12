@@ -25,7 +25,7 @@ def getTokenCookie():
 	token = sc.json()['response']['token']
 	login_header = {'X-SecurityCenter':str(token)}
 	headers.update(login_header)
-
+ 
 	return(cookie,headers)
 
 
