@@ -22,10 +22,7 @@ def getTokenCookie():
 	token = sc.json()['response']['token']
 	login_header = {'X-SecurityCenter':str(token)}
 	headers.update(login_header)
-<<<<<<< HEAD
-=======
- 
->>>>>>> origin/master
+
 	return(cookie,headers)
 
 
@@ -89,10 +86,8 @@ def getCiscoServer(headers,cookie,ports):
 if __name__ == '__main__':
 	print("Getting logged into SecurityCenter...")	
 	#gets the login information
-	cookie,headers = getTokenCookie()
-<<<<<<< HEAD
-	ports = getOpenPorts(headers,cookie)
-	getCiscoServer(headers,cookie,ports)
-=======
-	getCiscoServer(headers,cookie)
->>>>>>> origin/master
+	cookie,headers = getTokenCookie() #gets the auth for logging in
+	
+	ports = getOpenPorts(headers,cookie) #list of all open ports on cisco devices
+	getCiscoServer(headers,cookie,ports) #Tests devices for level 15 access
+
