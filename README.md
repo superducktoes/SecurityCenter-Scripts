@@ -8,3 +8,5 @@ Scripts for Tenable SecurityCenter
 <b>exportSoftware.py</b> - Uses plugins 22869 and 20811 and exports software to a clean list in .csv format
 <br>
 <b>level15.py</b> - Searches for Cisco devices with web servers and level 15 access with no auth
+<br>
+<b>mail.py</b> - Used to send email alerts for SecurityCenter items
